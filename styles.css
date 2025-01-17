@@ -1,0 +1,187 @@
+/* Importing the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Universal selector to apply basic styles across all elements */
+* {
+    margin: 0; /* Removes default margin from all elements */
+    padding: 0; /* Removes default padding from all elements */
+    box-sizing: border-box; /* Ensures padding and border are included in element dimensions */
+    font-family: 'Poppins', Arial, sans-serif; /* Sets the font for all elements */
+}
+
+/* Body styling */
+body {
+    color: #161010; /* Default text color */
+    background-color: #8fbd81; /* Background color */
+    overflow: hidden; /* Disables scrolling */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Aligns children vertically */
+    justify-content: space-between; /* Distributes space between children */
+    min-height: 100vh; /* Ensures body height covers the full viewport */
+}
+
+/* Header styling */
+.header {
+    position: absolute; /* Positions header at the top */
+    top: 0; /* Aligns to the top of the viewport */
+    left: 0; /* Aligns to the left of the viewport */
+    width: 100%; /* Stretches header to full width */
+    padding: 20px 10%; /* Adds padding (10% of width on sides) */
+    background: rgba(24, 61, 28, 0.9); /* Semi-transparent background */
+    display: flex; /* Flexbox layout for child alignment */
+    justify-content: space-between; /* Space between logo and navigation links */
+    align-items: center; /* Aligns items vertically */
+    z-index: 100; /* Ensures header is above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
+}
+
+/* Logo styling */
+.logo {
+    font-size: 32px; /* Font size of the logo */
+    color: #ffffff; /* White text color */
+    text-decoration: none; /* Removes underline */
+    font-weight: 700; /* Bold text */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Logo hover effect */
+.logo:hover {
+    color: #b5e77c; /* Changes color when hovered */
+}
+
+/* Navbar links styling */
+.navbar a {
+    font-size: 18px; /* Font size for links */
+    color: #49704d; /* Default link color */
+    text-decoration: none; /* Removes underline */
+    font-weight: 500; /* Medium font weight */
+    margin-left: 35px; /* Spacing between links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Navbar link hover and active state */
+.navbar a:hover,
+.navbar a.active {
+    color: #b5e77c; /* Highlight color */
+}
+
+/* Main container styling */
+.main {
+    height: calc(100vh - 40px); /* Takes the full viewport height minus footer height */
+    display: flex; /* Flexbox for centering content */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    background: linear-gradient(to bottom, #ace7ac, #99cc99); /* Gradient background */
+    background-size: cover; /* Ensures background covers container */
+    background-position: center; /* Centers the background image */
+}
+
+/* Home content container styling */
+.home {
+    display: flex; /* Flexbox for column layout */
+    flex-direction: column; /* Aligns items vertically */
+    align-items: center; /* Centers items horizontally */
+    text-align: center; /* Centers text */
+    padding: 0 20px; /* Adds horizontal padding */
+    max-width: 100%; /* Ensures it doesn’t exceed full width */
+}
+
+/* Home content heading styling */
+.home-content h1 {
+    font-size: 5vw; /* Responsive font size based on viewport width */
+    font-weight: 700; /* Bold font */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Adds subtle text shadow */
+    margin-bottom: 10px; /* Spacing below the heading */
+    color: #1d4922; /* Greenish text color */
+}
+
+/* Home content subheading styling */
+.home-content h3 {
+    font-size: 2.5vw; /* Responsive font size */
+    font-weight: 600; /* Semi-bold font */
+    margin-bottom: 20px; /* Spacing below the subheading */
+    color: #1d4922; /* Greenish text color */
+}
+
+/* Home content paragraph styling */
+.home-content p {
+    font-size: 1.5vw; /* Responsive font size */
+    color: #1f3d21; /* Dark green text color */
+    margin-bottom: 30px; /* Spacing below the paragraph */
+    max-width: 800px; /* Limits paragraph width */
+}
+
+/* Register button styling */
+.register-btn {
+    width: 15%; /* Button width relative to parent */
+    min-width: 150px; /* Minimum width */
+    height: 50px; /* Fixed height */
+    background: #153819; /* Dark green background */
+    border: 2px solid #124314; /* Border color */
+    outline: none; /* Removes outline */
+    border-radius: 6px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(26, 87, 33, 0.5); /* Subtle glow effect */
+    font-size: 1.2vw; /* Responsive font size */
+    color: #fff; /* White text */
+    font-weight: 600; /* Semi-bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+/* Register button hover effect */
+.register-btn:hover {
+    background: #6bc485; /* Lighter green background */
+    box-shadow: 0 0 15px rgba(0, 255, 42, 0.7); /* Brighter glow effect */
+}
+
+/* Footer styling */
+.footer {
+    height: 40px; /* Fixed footer height */
+    background: rgba(157, 204, 162, 0.9); /* Semi-transparent green background */
+    color: #203f22; /* Text color */
+    display: flex; /* Flexbox layout for alignment */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    font-size: 14px; /* Font size */
+    text-align: center; /* Centers text */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow at the top */
+}
+
+/* Highlight color for footer text */
+.footer span {
+    color: #b5e77c; /* Greenish color for highlighted text */
+}
+
+/* Media query for devices with max-width of 768px */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%; /* Adjusts header padding for smaller screens */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Reduces font size of navigation links */
+        margin-left: 20px; /* Reduces spacing between links */
+    }
+
+    .home-content h1 {
+        font-size: 6vw; /* Adjusts heading size for smaller screens */
+    }
+
+    .home-content h3 {
+        font-size: 4vw; /* Adjusts subheading size */
+    }
+
+    .home-content p {
+        font-size: 3vw; /* Adjusts paragraph font size */
+    }
+
+    .register-btn {
+        width: 30%; /* Increases button width */
+        min-width: 130px; /* Adjusts minimum width */
+        font-size: 4vw; /* Adjusts font size for smaller screens */
+    }
+
+    .footer {
+        font-size: 12px; /* Reduces footer text size */
+    }
+}
